@@ -129,13 +129,32 @@ const Index = () => {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { category: "Электроника", growth: "+245%", revenue: "12.5М ₽" },
-              { category: "Одежда", growth: "+320%", revenue: "8.2М ₽" },
-              { category: "Косметика", growth: "+180%", revenue: "15.7М ₽" },
+              { 
+                category: "Электроника", 
+                growth: "+245%", 
+                revenue: "12.5М ₽",
+                image: "https://cdn.poehali.dev/projects/6bb1f300-11ba-4362-b33e-5303780e1116/files/5194d7a0-b285-4740-a019-2823ddc76862.jpg"
+              },
+              { 
+                category: "Одежда", 
+                growth: "+320%", 
+                revenue: "8.2М ₽",
+                image: "https://cdn.poehali.dev/projects/6bb1f300-11ba-4362-b33e-5303780e1116/files/1b5e4736-7eff-4403-aed3-0cc02977302c.jpg"
+              },
+              { 
+                category: "Косметика", 
+                growth: "+180%", 
+                revenue: "15.7М ₽",
+                image: "https://cdn.poehali.dev/projects/6bb1f300-11ba-4362-b33e-5303780e1116/files/7dea1ff5-d486-4d63-95bb-d81dc82247d0.jpg"
+              },
             ].map((item, index) => (
               <Card key={index} className="overflow-hidden hover-scale">
-                <div className="h-48 bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
-                  <Icon name="ShoppingBag" size={64} className="text-primary opacity-20" />
+                <div className="h-48 overflow-hidden">
+                  <img 
+                    src={item.image} 
+                    alt={item.category}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <CardContent className="p-6 space-y-2">
                   <h3 className="text-xl font-semibold">{item.category}</h3>
